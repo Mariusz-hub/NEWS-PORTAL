@@ -1,7 +1,8 @@
 package com.news.NEWS.PORTAL.controller;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Service
+@RestController
 public class NewsController {
 }
