@@ -4,8 +4,10 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 @Generated("jsonschema2pojo")
-public class Article {
+public class Article implements Serializable {
 
     @SerializedName("source")
     @Expose
@@ -31,6 +33,7 @@ public class Article {
     @SerializedName("content")
     @Expose
     private String content;
+
 
     public Source getSource() {
         return source;
@@ -122,4 +125,17 @@ public class Article {
         return (((((((((this.publishedAt == rhs.publishedAt)||((this.publishedAt!= null)&&this.publishedAt.equals(rhs.publishedAt)))&&((this.author == rhs.author)||((this.author!= null)&&this.author.equals(rhs.author))))&&((this.urlToImage == rhs.urlToImage)||((this.urlToImage!= null)&&this.urlToImage.equals(rhs.urlToImage))))&&((this.description == rhs.description)||((this.description!= null)&&this.description.equals(rhs.description))))&&((this.source == rhs.source)||((this.source!= null)&&this.source.equals(rhs.source))))&&((this.title == rhs.title)||((this.title!= null)&&this.title.equals(rhs.title))))&&((this.url == rhs.url)||((this.url!= null)&&this.url.equals(rhs.url))))&&((this.content == rhs.content)||((this.content!= null)&&this.content.equals(rhs.content))));
     }
 
+    @Override
+    public String toString() {
+        return "Article{" +
+                "source=" + source +
+                ", author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
+                ", urlToImage='" + urlToImage + '\'' +
+                ", publishedAt='" + publishedAt + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

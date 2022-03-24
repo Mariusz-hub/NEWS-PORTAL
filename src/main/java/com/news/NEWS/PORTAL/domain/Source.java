@@ -5,8 +5,10 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 @Generated("jsonschema2pojo")
-public class Source {
+public class Source implements Serializable {
 
     @SerializedName("id")
     @Expose
@@ -51,4 +53,11 @@ public class Source {
         return (((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name)))&&((this.id == rhs.id)||((this.id!= null)&&this.id.equals(rhs.id))));
     }
 
+    @Override
+    public String toString() {
+        return "Source{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

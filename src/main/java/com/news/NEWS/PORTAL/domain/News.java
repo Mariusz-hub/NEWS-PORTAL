@@ -1,12 +1,13 @@
 package com.news.NEWS.PORTAL.domain;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class News {
+public class News implements Serializable {
 
     @SerializedName("status")
     @Expose
@@ -63,4 +64,12 @@ public class News {
         return ((((this.totalResults == rhs.totalResults)||((this.totalResults!= null)&&this.totalResults.equals(rhs.totalResults)))&&((this.articles == rhs.articles)||((this.articles!= null)&&this.articles.equals(rhs.articles))))&&((this.status == rhs.status)||((this.status!= null)&&this.status.equals(rhs.status))));
     }
 
+    @Override
+    public String toString() {
+        return "News{" +
+                "status='" + status + '\'' +
+                ", totalResults=" + totalResults +
+                ", articles=" + articles +
+                '}';
+    }
 }
