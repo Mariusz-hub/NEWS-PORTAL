@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link th:rel="stylesheet" th:href="@{assets/select2-develop/dist/css/select2.css}"/>
+    <link th:rel="stylesheet" th:href="@{assets/select2-bootstrap4-theme-master/dist/select2-bootstrap4.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<p>WELCOME</p>
+<p th:text="${article.getTitle}"></p>
+<p th:text="${article.getContent}"></p>
+
+<tr th:each= "arti: ${art}" >
+    <td th:text="${arti.getTitle}"/>
+    <td th:text="${arti.getContent}"/>
+
+</tr>
+
+<img th:src="@{https://ocdn.eu/pulscms-transforms/1/FtXk9kpTURBXy8xODhhNjc5YWNjYjU1NzBkY2ZkNTE2ODQ2M2M1YWE0ZS5qcGeTlQMAfc0PoM0IypMJpjIyN2IyNAaTBc0EsM0CdoGhMAE/magda-linette.jpg}" th:width="200" />
+
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://ocdn.eu/pulscms-transforms/1/JmKk9kpTURBXy8wOTRjMTE5NDQwOTBiNWRiZWVmNjdmNjQ0M2I4NWRiNy5qcGeTlQPNCFLM880Foc0DK5MJpjQ5YjIyMAaTBc0EsM0CdoGhMAE/mesut-oezil.jpg">Contact</a>
+            <img src="https://ocdn.eu/pulscms-transforms/1/JmKk9kpTURBXy8wOTRjMTE5NDQwOTBiNWRiZWVmNjdmNjQ0M2I4NWRiNy5qcGeTlQPNCFLM880Foc0DK5MJpjQ5YjIyMAaTBc0EsM0CdoGhMAE/mesut-oezil.jpg" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+        </li>
+    </ul>
+</div>
+</body>
+</html>
