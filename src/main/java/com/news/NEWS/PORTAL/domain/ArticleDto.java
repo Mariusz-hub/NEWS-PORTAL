@@ -5,16 +5,18 @@ public class ArticleDto {
     private String author;
     private String title;
     private String description;
-    private String url;
+    private String urlToArticle;
+    private String urlToImage;
 
     public ArticleDto() {
     }
 
-    public ArticleDto(String author, String title, String description, String url) {
+    public ArticleDto(String author, String title, String description, String urlToArticle, String urlToImage) {
         this.author = author;
         this.title = title;
         this.description = description;
-        this.url = url;
+        this.urlToArticle = urlToArticle;
+        this.urlToImage = urlToImage;
     }
 
     public String getAuthor() {
@@ -41,12 +43,20 @@ public class ArticleDto {
         this.description = description;
     }
 
-    public String getUrl() {
-        return url;
+    public String getUrlToArticle() {
+        return urlToArticle;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrlToArticle(String urlToArticle) {
+        this.urlToArticle = urlToArticle;
+    }
+
+    public String getUrlToImage() {
+        return urlToImage;
+    }
+
+    public void setUrlToImage(String urlToImage) {
+        this.urlToImage = urlToImage;
     }
 
     @Override
@@ -55,7 +65,8 @@ public class ArticleDto {
                 "author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", url='" + url + '\'' +
+                ", urlToArticle='" + urlToArticle + '\'' +
+                ", urlToImage='" + urlToImage + '\'' +
                 '}';
     }
 }
