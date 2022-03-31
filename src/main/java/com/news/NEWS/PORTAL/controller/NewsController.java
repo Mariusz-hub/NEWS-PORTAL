@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
-
+//TODO
+// 1. Add View to each Get
+// 2. Add view to user Choice
 
 @RestController
 @RequestMapping("/api")
@@ -57,7 +60,7 @@ public class NewsController {
 
     @GetMapping("/articles/business/pl")
     public ResponseEntity<List<ArticleDto>> getArticlesFromBussinesInPl() {
-        List<ArticleDto> articleDtos = newsService.getArticles("bussiness", "pl");
+        List<ArticleDto> articleDtos = newsService.getArticles("business", "pl");
         if (articleDtos.isEmpty()) {
             LOGGER.error("Articles not found");
             throw new ArticleNotFoundException("Articles not found");
